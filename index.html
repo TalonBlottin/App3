@@ -1,25 +1,6 @@
 <!DOCTYPE html>
 <html>
-<!--The following code has been developed by students and/or researchers of the Freshman Research Initiative Maker Space Stream at The University of Texas at Austin. This code is shared for demonstration purposes and should not be considered a product -- it is for entertainment purposes only.
-
-Any user of this code does so at their own risk. Members of the Maker Space Stream, FRI, and The University of Texas system are not liable for anything related to this code.
-
-THIS CODE SHOULD NOT BE USED TO DIAGNOSE ANY KIND OF MEDICAL CONDITION.
-
-Authors in chronological order of contribution:
-  Tim Riedel
-  Niam Kuttanna
-  [...]
-
-Further Information:
-  http://cns.utexas.edu/fri
-
-Brief summary of this code: [...]
-
-Known issues: [...]
-
-https://www.w3schools.com/w3css/default.asp
-https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-file
+<!--Comments
 -->
 
   <!--Formatting source information and webpage title.-->
@@ -35,21 +16,24 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 
 <!--Javascript code.-->
 <script>
-	var exampleVariable1 = 0;
-	var exampleVariable2 = 0;
-	var exampleVariable3 = 0;
+	<h1>Age Calculator</h1>
+	<form>
+		<label for="birthdate">Enter your birth date:</label>
+		<input type="date" id="birthdate" name="birthdate">
+		<br><br>
+		<button type="button" onclick="calculateAge()">Calculate Age</button>
+	</form>
+	<p>Your age is <span id="age"></span></p>
 	
-	function exampleFunction1()
-	{
-		// Assigns values to existing variables based on user input. The parseFloat() function converts string values to numerical values.
-    		exampleVariable1 = parseFloat(document.getElementById("firstInputBox").value);
-    		exampleVariable2 = parseFloat(document.getElementById("secondInputBox").value);
-		
-		exampleVariable3 = exampleVariable1 + exampleVariable2;
-		
-		alert("You just ran an addition function!");
-		console.log("Addition function was run.");
-	}
+	
+		function calculateAge() {
+			var birthdate = new Date(document.getElementById("birthdate").value);
+			var today = new Date();
+			var ageInMilliseconds = today - birthdate;
+			var ageInYears = Math.floor(ageInMilliseconds / 31556952000);
+			document.getElementById("age").innerHTML = ageInYears;
+		}
+	
 	
 	function exampleFunction2()
 	{
