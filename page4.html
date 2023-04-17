@@ -4,15 +4,28 @@
 	<title>App Assignment 3</title>
 </head>
 <body>
-	<form>
-	<label for="water">Ounces of Water:</label><br>
-  <input type="text" id="water" name="water"><br>
-		<input type="submit" value="Submit">
-		</form>
+	<button onclick="myFunction()">Click me</button>
 	<button onclick="window.location.href = 'index.html';">HOME</button>
 
 	<script>
+		myFunction()
+		{
+		 const input1 = parseFloat(window.localStorage.getItem('input1')); // Use parseFloat to convert the value to a number
+  const input2 = parseFloat(window.localStorage.getItem('input2'));
+  
+  // Check if the inputs are valid numbers
+  if (isNaN(input1) || isNaN(input2)) {
+    // If either input is not a number, return an error message
+    return 'Invalid inputs';
+  }
+  
+  // Divide the inputs and return the result
+  const result = input1 / input2;
+  return result;
+	
 		
+		}
+	
 	</script>
 </body>
 </html>
