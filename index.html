@@ -34,7 +34,7 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 	var people = 0;
 	var exampleVariable3 = 0;
 	
-	function exampleFunction1()
+	function additionFunction()
 	{
 		// Assigns values to existing variables based on user input. The parseFloat() function converts string values to numerical values.
     		exampleVariable1 = parseFloat(document.getElementById("firstInputBox").value);
@@ -46,7 +46,7 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 		console.log("Addition function was run.");
 	}
 	
-	function exampleFunction2()
+	function multiplyFunction2()
 	{
 		exampleVariable1 = parseFloat(document.getElementById("firstInputBox").value);
     		exampleVariable2 = parseFloat(document.getElementById("secondInputBox").value);
@@ -57,15 +57,15 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 		console.log("Multiplication function was run.");
 	}
 	
-	function exampleFunction3()
+	function subtractFunction3()
 	{
 		exampleVariable1 = parseFloat(document.getElementById("firstInputBox").value);
     		exampleVariable2 = parseFloat(document.getElementById("secondInputBox").value);
 		
-		exampleVariable3 = exampleVariable1 ** exampleVariable2;
+		exampleVariable3 = exampleVariable1 - exampleVariable2;
 		
-		alert("You just ran an exponent function!");
-		console.log("Exponent function was run.");
+		alert("You just ran a subtraction function!");
+		console.log("Subtraction function was run.");
 	}
 	
 	function exampleResultsFunction()
@@ -120,21 +120,21 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
   <div id="content" class="w3-container">
   	<!--Header!-->
 	<div id="header" class="w3-container w3-flat-carrot">
-		<h1>APP NAME GOES HERE</h1>
+		<h1>Add, Multiply, Subtract</h1>
 	</div>
 	
-	  <p>INTRODUCTION/DESCRIPTION OF APP GOES HERE</p>
+	  <p>This app adds, multiplies, and subtracts 2 numbers.</p>
 	
 	  <a href="#one" class="w3-btn w3-grey w3-round">Get Started!</a>
 	
-	  <p>The following code has been developed by students and/or researchers of the Freshman Research Initiative Maker Space Stream at The University of Texas at Austin. This code is shared for demonstration purposes and should not be considered a product -- it is for entertainment purposes only. Any user of this code does so at their own risk. Members of the Maker Space Stream, FRI, and The University of Texas system are not liable for anything related to this code. THIS CODE SHOULD NOT BE USED TO DIAGNOSE ANY KIND OF MEDICAL CONDITION!</p>
+	  
   
   
   
 <!--FIRST SUBPAGE-->
 <div id="one" class="page">
 	<div id="header2" class="w3-container w3-flat-carrot">
-		<h1>How many ounces of water are there?</h1>
+		<h1>Enter two numbers!</h1>
 	</div>
 	
   <center>
@@ -154,10 +154,8 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 		
 		<br><br><br>
 	</form>
-      
-  <a href="#finalpage" onclick="exampleFunction1();" class="w3-btn w3-grey">Button 1</a>
-  <a href="#finalpage" onclick="exampleFunction2();" class="w3-btn w3-grey">Button 2</a>
-  <a href="#finalpage" onclick="exampleFunction3();" class="w3-btn w3-grey">Button 3</a>
+<a href="#middlepage" class="w3-btn w3-grey w3-round">Next!</a>
+ 
     
   </center>
 </div>  
@@ -176,23 +174,12 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 	  
 <!--Middle SUBPAGE-->
 <div id="middlepage" class="page">
-	<div id="content3" class="w3-container">
-        	<h1>How many people are there?</h1>  
-    	</div>
-	
-  <center>
-    
-	  <div id="finalcontent" class="w3-container">
-		  <p id="endResults">FINAL PAGE CONTENT GOES HERE</p>
-	  </div>
-  
-  <a class="w3-btn w3-black" onclick="exampleResultsFunction();">Click me!
-    <br>
-    <img id="resultsButtonImg" src="https://i.imgur.com/rZOaHhx.png" width="30" alt="spongebob">
-  </a>
-  <a href="#content" onclick="resetVariables();" class="w3-btn w3-black">Return to Home Page</a>
-    
-  </center>
+	<div id="header2" class="w3-container w3-flat-carrot">
+		<h1>What would you like to do?</h1>
+	</div>
+	 <a href="#finalpage" onclick="additionFunction1();" class="w3-btn w3-grey">Button 1</a>
+  <a href="#finalpage" onclick="exampleFunction2();" class="w3-btn w3-grey">Button 2</a>
+  <a href="#finalpage" onclick="exampleFunction3();" class="w3-btn w3-grey">Button 3</a>
 </div>
 	  
 	  
@@ -200,14 +187,12 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 	  
 	  
 	  
-<!--Middle SUBPAGE-->	  
+<!--Final SUBPAGE-->	  
   
 	  
 	  
  <div id="finalpage" class="page">
-	<div id="content4" class="w3-container">
-        	<h1>How much water does everyone get?</h1>  
-    	</div>
+	
 	
   <center>
     onload="myFunction()">
