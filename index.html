@@ -23,6 +23,8 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
     <link rel="stylesheet" href="w3.css">
     <link rel="stylesheet" href="w3-colors-flat.css">
   </head>
+	
+	
 
   
 
@@ -78,6 +80,11 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 		exampleVariable2 = 0;
 		exampleVariable3 = 0;
 	}
+	
+	function myFunction() {
+      var number = "123";
+      document.getElementById("myText").innerHTML = number;
+    }
 </script>
   
   
@@ -127,14 +134,12 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 <!--FIRST SUBPAGE-->
 <div id="one" class="page">
 	<div id="header2" class="w3-container w3-flat-carrot">
-		<h1>Question 1</h1>
+		<h1>How many ounces of water are there?</h1>
 	</div>
 	
   <center>
     
-    	<div id="content2" class="w3-container">
-        	<p>QUESTION 1 GOES HERE</p>    
-    	</div>
+   
 	
 	<!--Form element. This allows for user input in HTML.-->
 	<form>
@@ -169,11 +174,11 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 	  
 	  
 	  
-<!--LAST SUBPAGE-->
-<div id="finalpage" class="page">
-	<div id="finalheader" class="w3-container w3-flat-carrot">
-		<h1>FINAL PAGE TITLE GOES HERE</h1>
-	</div>
+<!--Middle SUBPAGE-->
+<div id="middlepage" class="page">
+	<div id="content3" class="w3-container">
+        	<h1>How many people are there?</h1>  
+    	</div>
 	
   <center>
     
@@ -189,9 +194,43 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
     
   </center>
 </div>
+	  
+	  
+	  
+	  
+	  
+	  
+<!--Middle SUBPAGE-->	  
+  
+	  
+	  
+ <div id="finalpage" class="page">
+	<div id="content4" class="w3-container">
+        	<h1>How much water does everyone get?</h1>  
+    	</div>
+	
+  <center>
+    onload="myFunction()">
+
+  <h2>"The value for number is: " <span id="myText"></span></h2>
+  
+  <a class="w3-btn w3-black" onclick="exampleResultsFunction();">Click me!
+    <br>
+    <img id="resultsButtonImg" src="https://i.imgur.com/rZOaHhx.png" width="30" alt="spongebob">
+  </a>
+  <a href="#content" onclick="resetVariables();" class="w3-btn w3-black">Return to Home Page</a>
+    
+  </center>
+</div>
   
   
   
+	  
+	  
+	  
+	  
+	  
+	  
 <!--Footer!-->
 <footer class="w3-bottom w3-container w3-flat-carrot">
 	<p>YOUR NAME (or anything you want) HERE</p>
