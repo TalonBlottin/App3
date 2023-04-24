@@ -45,21 +45,10 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 		
 		alert("You just ran an addition function!");
 		console.log("Addition function was run.");
+		document.getElementById("myText").innerHTML = exampleVariable3;
 	}
 	
-	function multiplyFunction2()
-	{
-		exampleVariable1 = parseFloat(document.getElementById("firstInputBox").value);
-    		exampleVariable2 = parseFloat(document.getElementById("secondInputBox").value);
-		
-		exampleVariable3 = exampleVariable1 * exampleVariable2;
-		
-		
-		alert("You just ran a multiplication function!");
-		console.log("Multiplication function was run.");
-	}
-	
-	function subtractFunction3()
+	function subtractionFunction()
 	{
 		exampleVariable1 = parseFloat(document.getElementById("firstInputBox").value);
     		exampleVariable2 = parseFloat(document.getElementById("secondInputBox").value);
@@ -69,6 +58,18 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 		
 		alert("You just ran a subtraction function!");
 		console.log("Subtraction function was run.");
+	}
+	
+	function multFunction3()
+	{
+		exampleVariable1 = parseFloat(document.getElementById("firstInputBox").value);
+    		exampleVariable2 = parseFloat(document.getElementById("secondInputBox").value);
+		
+		exampleVariable3 = exampleVariable1 * exampleVariable2;
+		
+		
+		alert("You just ran a multiplication function!");
+		console.log("Multiplication function was run.");
 	}
 	
 	function exampleResultsFunction()
@@ -123,21 +124,21 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
   <div id="content" class="w3-container">
   	<!--Header!-->
 	<div id="header" class="w3-container w3-flat-carrot">
-		<h1>Add, Multiply, Subtract</h1>
+		<h1>Watermelon City</h1>
 	</div>
 	
-	  <p>This app adds, multiplies, and subtracts 2 numbers.</p>
+	  <p>This app will tell you how many watermelons you have!!!.</p>
 	
 	  <a href="#one" class="w3-btn w3-grey w3-round">Get Started!</a>
 	
 	  
-  
+  <!--HEREEEEEEEEEEEEE-->
   
   
 <!--FIRST SUBPAGE-->
 <div id="one" class="page">
 	<div id="header2" class="w3-container w3-flat-carrot">
-		<h1>Enter two numbers!</h1>
+		<h1>Enter two numbers! The first will be the current number of watermelons you have and the second will be watever number you will perform your +,-,* opperation with!</h1>
 	</div>
 	
   <center>
@@ -147,11 +148,11 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 	<!--Form element. This allows for user input in HTML.-->
 	<form>
 		<!--Label for first input field.-->
-		<label for="firstInputBox">Enter a number:</label><br>
+		<label for="firstInputBox">Watermelons</label><br>
 		<!--User input box.-->
 		<input type="number" id="firstInputBox" value="0"><br>
 		<!--Label for second input field.-->
-		<label for="secondInputBox">Enter another number:</label><br>
+		<label for="secondInputBox">Chosen number</label><br>
 		<!--User input box.-->
 		<input type="number" id="secondInputBox" value="0">
 		
@@ -180,9 +181,9 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 	<div id="header2" class="w3-container w3-flat-carrot">
 		<h1>What would you like to do?</h1>
 	</div>
-	 <a href="#finalpage" onclick="additionFunction1();" class="w3-btn w3-grey">Button 1</a>
-  <a href="#finalpage" onclick="exampleFunction2();" class="w3-btn w3-grey">Button 2</a>
-  <a href="#finalpage" onclick="exampleFunction3();" class="w3-btn w3-grey">Button 3</a>
+	 <a href="#finalpage" onclick="additionFunction();" class="w3-btn w3-grey">Add</a>
+  <a href="#finalpage" onclick="subtractionFunction();" class="w3-btn w3-grey">Subtract</a>
+  <a href="#finalpage" onclick="multFunction();" class="w3-btn w3-grey">Multiply</a>
 </div>
 	  
 	  
@@ -197,18 +198,11 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
  <div id="finalpage" class="page">
 	
 	
-  <center>
- <body onload="exampleResultsFunction()">
+  <body onload="exampleResultsFunction()">
 
-  <h2>"The value for number is: " </h2>
-  
-  <a class="w3-btn w3-black" onclick="exampleResultsFunction();">Click me!
-    <br>
-    <img id="resultsButtonImg" src="https://i.imgur.com/rZOaHhx.png" width="30" alt="spongebob">
-  </a>
-  <a href="#content" onclick="resetVariables();" class="w3-btn w3-black">Return to Home Page</a>
-    
-  </center>
+  <h1>"Watermelons: " <span id="myText"></span></h1>
+
+</body>
 </div>
   
   
