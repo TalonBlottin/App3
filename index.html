@@ -110,7 +110,7 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
     left: -100vw;
     overflow-y: auto;
     z-index: 0;
-    background-color: hsl(0,0%,100%);
+    background-color: hsl(5, 80%, 40%);
 }
 
 .page:target {
@@ -184,9 +184,9 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 	<div id="header2" class="w3-container w3-flat-carrot">
 		<h1>What would you like to do?</h1>
 	</div>
-	 <a href="#finalpage" onclick="additionFunction();" class="w3-btn w3-grey">Add</a>
-  <a href="#finalpage" onclick="subtractionFunction();" class="w3-btn w3-grey">Subtract</a>
-  <a href="#finalpage" onclick="multFunction();" class="w3-btn w3-grey">Multiply</a>
+	 <a href="#fourthpage" onclick="additionFunction();" class="w3-btn w3-grey">Add</a>
+  <a href="#fourthpage" onclick="subtractionFunction();" class="w3-btn w3-grey">Subtract</a>
+  <a href="#fourthpage" onclick="multFunction();" class="w3-btn w3-grey">Multiply</a>
 </div>
 	  
 	  
@@ -194,7 +194,21 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 	  
 	  
 	  
-<!--Final SUBPAGE-->	  
+<!--4th SUBPAGE-->	  
+  
+	  
+	  
+ <div id="fourthpage" class="page">
+	
+	
+  <body onload="exampleResultsFunction()">
+
+  <h1>Watermelons:  <span id="myText"></span></h1>
+ <a href="#finalpage" class="w3-btn w3-grey w3-round">Next!</a>
+</body>
+</div>
+  
+	  <!--Final SUBPAGE-->	  
   
 	  
 	  
@@ -203,11 +217,10 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 	
   <body onload="exampleResultsFunction()">
 
-  <h1>Watermelons:  <span id="myText"></span></h1>
+  <h1>Thank you! Code credit to UT Austin Maker Space Team Drive.</h1>
  <a href="#content" onclick="resetVariables();" class="w3-btn w3-black">Return to Home Page</a>
 </body>
 </div>
-  
   
   
 	  
