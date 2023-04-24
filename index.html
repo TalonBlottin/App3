@@ -58,6 +58,7 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 		
 		alert("You just ran a subtraction function!");
 		console.log("Subtraction function was run.");
+		document.getElementById("myText").innerHTML = exampleVariable3;
 	}
 	
 	function multFunction3()
@@ -65,11 +66,13 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 		exampleVariable1 = parseFloat(document.getElementById("firstInputBox").value);
     		exampleVariable2 = parseFloat(document.getElementById("secondInputBox").value);
 		
+		
 		exampleVariable3 = exampleVariable1 * exampleVariable2;
 		
 		
 		alert("You just ran a multiplication function!");
 		console.log("Multiplication function was run.");
+		document.getElementById("myText").innerHTML = exampleVariable3;
 	}
 	
 	function exampleResultsFunction()
@@ -201,7 +204,7 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
   <body onload="exampleResultsFunction()">
 
   <h1>"Watermelons: " <span id="myText"></span></h1>
-
+ <a href="#content" onclick="resetVariables();" class="w3-btn w3-black">Return to Home Page</a>
 </body>
 </div>
   
